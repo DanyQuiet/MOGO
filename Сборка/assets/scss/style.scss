@@ -1,0 +1,45 @@
+ // @import "blocks/footer";
+ @import "blocks/reset";
+ @import "blocks/fonts";
+ 
+
+
+
+ body {
+ 	font-family: 'Montserrat', sans-serif;
+ 	font-size: 15px;
+ 	color: #333;
+ 	line-height: 1.6;
+ 
+
+ }
+
+ 
+
+ 
+ .container {
+ 	width: 100%;
+ 	max-width: 1230px;
+ 	margin: 0 auto;
+ 	padding: 0 15px;
+ 	box-sizing: border-box;
+ }
+
+ .page {
+ 	// overflow: hidden;
+ }
+
+@import "blocks/welcom";
+@import "blocks/btn";
+@import "blocks/about";
+@import "blocks/section";
+@import "blocks/whatwedo";
+@import "blocks/meetourteam";
+@import "blocks/works";
+@import "blocks/whtpeoplesay";
+@import "blocks/stories";
+@import "blocks/footer";
+@import "blocks/media";
+
+
+

@@ -1,0 +1,49 @@
+ .social {
+ 	display: flex;
+ 	justify-content: center;
+ }
+
+ .social__item {
+ 	// height: 55px;
+ 	// width: 55px;
+ 
+ 	padding: 10px;
+
+ 	background-color: #fce38a;
+ 	border-right: 1px solid #f38181;
+
+ 	font-size: 30px;
+ 	text-decoration: none;
+ 	color: #f38181;
+ 	line-height: 1;
+
+ 	transition: background .1s linear, color .1s linear;
+
+ 	&:last-child {
+ 		border-right: 0;
+ 	}
+
+ 	&:hover {
+ 		color: #fff;
+ 		background-color: #f38181;
+ 	}
+ }
+
+
+.logos {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 -15px;
+}
+
+.logos__tem {
+	padding: 0 15px;
+}
+
+.logos__img {
+// Логотипы пропорциаонально уменьшаются
+	display: block;
+	max-width: 100%;
+	height: auto;
+}

@@ -1,0 +1,316 @@
+// Container
+
+
+ .intro {
+ 	display: flex;
+ 	flex-direction: column;
+ 	justify-content: center;
+ 	position: relative;
+
+ 	width: 100%;
+ 	// Блок будет во весь экран пользователя
+ 	height: 100vh;
+ 	min-height: 820px;
+
+ 	background: url("../images/intro.jpg") center no-repeat;;
+ 	background-size: cover;
+ }
+
+  .intro__inner {
+  	padding-bottom: 30px;
+ 	width: 100%;
+ 	max-width: 880px;
+ 	margin: 0 auto;
+
+ 	text-align: center;
+ }
+
+
+ .intro__title {
+ 	color: #fff;
+ 	font-size: 150px;
+ 	font-weight: 700;
+ 	text-transform: uppercase;
+ 	line-height: 1;
+
+ 	&:after {
+ 		content: "";
+ 		display: block;
+ 		width: 60px;
+ 		height: 3px;
+ 		margin: 60px auto;
+
+ 		background-color: #fff;
+ 	}
+ }
+
+ .intro__suptitle {
+	margin-bottom: 20px;
+
+ 	font-size: 72px;
+ 	color: #fff;
+ 	font-family: 'Kaushan Script', cursive;
+ }
+
+
+
+ .header {
+	width: 100%;
+	padding-top: 30px;
+
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ 	right: 0;
+ 	z-index: 1000;
+ }
+
+ // обязательно добавляй модификатор после класса
+ // в оригинале класс называется .header.fixed
+ .header--fixed {
+ 	padding: 10px 0;
+ 	background-color: #eb8b8d;
+ 	box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
+
+ 	position: fixed;
+ 	top: 0;
+ 	left: 0;
+ 	right: 0;
+// Чтобы мышка не двигалась при скроле
+ 	transform: translate3d(0, 0, 0);
+ }
+// когда в классе header появится модификатор active
+ .header.active {
+ 	background-color: #eb8b8d;
+ }
+
+ .header__inner {
+ 	display: flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+ }
+
+ .header__logo {
+ 	font-size: 30px;
+ 	font-weight: 700;
+ 	color: #fff;
+ }
+
+ .nav {
+ 	font-size: 18px;
+ 	text-transform: uppercase;
+// nav__link
+ 	&__link {
+ 		display: inline-block;
+ 		// Что за тэг ? для чего он
+ 		// vertical-align: top;
+ 		margin: 0 15px;
+ 		position: relative;
+
+ 		color: #fff;
+ 		text-decoration: none;
+
+ 		transition: color .1s linear;
+
+ 		&.active,
+ 		&.active:after {
+ 			color: #fce38a;
+ 			opacity: 1;
+
+ 		}
+
+ 		&:hover {
+ 			color: #fce38a;
+ 			
+ 			&:after {
+ 				opacity: 1;
+ 			}
+
+ 		}
+
+
+		&:after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 3px;
+
+			background-color: #fce38a;
+			opacity: 0;
+
+			position: absolute;
+			top: 100%;
+			left: 0;
+			z-index: 1;
+
+			transition: opacity .1s linear;
+			opacity: 0;
+		}
+	}
+
+ }
+
+ // .nav__link-icon {
+ // 	display: inline;
+ // 	text-decoration: none;
+ // 	width: 100%;
+ // 	position: relative;
+ // 	margin-left: 50px;
+
+  
+
+ // 	i {
+ // 		color: #fce38a;
+
+ // 		position: absolute;
+ // 		top: 0;
+ // 		left: 0;
+ 		
+
+ // 			&:hover {
+ 			
+ // 			color: white;
+ // 			font-size: 30px;
+ // 			transition: font-size .2s linear;
+ // 		}
+ // 	}	 
+ // }
+
+.nav-toggle {
+	padding: 10px 0;
+	width: 30px;
+	// скрываем display
+	display: none;
+
+	position: absolute;
+	top: 24px;
+	right: 24px;
+	z-index: 1;
+
+	font-size: 0;
+	color: transparent;
+	cursor: pointer;
+
+	background-color: transparent;
+ 	border: none;
+
+ 	&:focus {
+ 		outline: 0;
+ 	}	
+ }
+
+ .nav-toggle__item {
+ 	display: block;
+
+ 	width: 100%;
+ 	height: 3px;
+ 	background-color: #fff;
+
+ 	position: absolute;
+ 	top: 0;
+ 	right: 0;
+ 	bottom: 0;
+ 	left: 0;
+ 	margin: auto;
+
+ 	transition:  background .2s linear;
+
+ 	&:before,
+ 	&:after {
+ 		content: "";
+ 		width: 100%;
+ 		height: 3px;
+
+ 		background-color: #fff;
+
+ 		position: absolute;
+ 		left: 0;
+ 		z-index: 1;
+
+ 		transition: transform .2s linear;
+ 	}
+
+ 	&:before {
+ 		top: -8px;
+ 	}
+
+ 	&:after {
+ 		bottom: -8px;
+ 	}
+ }
+//  пропадает середина бургера
+ .nav-toggle.active .nav-toggle__item {
+ 	background: none;
+
+ 	&:before {
+ 		// Что это?
+ 		transform-origin: left top;
+ 		transform: rotate(45deg) translateX(-2px);
+ 	}
+
+ 	&:after {
+ 		// Что это?
+ 		transform-origin: left bottom;
+ 		transform: rotate(-45deg) translateX(-3px);
+ 	}
+ }
+
+
+ 
+
+ .slider {
+ 	width: 100%;
+ 	
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+
+ }
+
+ .slider__inner {
+ 	display: flex;
+ 	justify-content: space-between;
+ }
+
+
+.slider__item {
+	width: 23%;
+	padding: 20px 0;
+	position: relative;
+
+	border-top: 3px solid #fff;
+	opacity: .7;
+
+	font-size: 18px;
+	color: #fff;
+	text-transform: uppercase;
+
+	&.active {
+		opacity: 1;
+
+		&:before {
+			content: "";
+			display: block;
+			width: 70px;
+			height: 3px;
+
+			background-color: #f38181;
+
+			position: absolute;
+			top: -3px;
+			left: 0;
+			z-index: 1;
+		}
+	}
+ }
+
+ .slider__num {
+ 	font-size: 24px;
+ 	font-weight: 700;
+ }
+
+
+
+
+

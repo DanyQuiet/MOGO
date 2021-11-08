@@ -1,0 +1,214 @@
+.footer {
+	padding-top: 65px;	
+	background-color: #f8f8f8;
+}
+
+.footer__inner {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	margin: 0 -15px;
+	padding-bottom: 65px;
+}
+
+.footer__col {
+	padding: 0 15px;
+}
+
+.footer__col--first {
+	width: 40%;
+}
+
+.footer__col--second {
+	width: 27%;
+}
+
+.footer__col--third {
+	width: 23%;
+}
+
+
+
+.footer__logo {
+	font-size: 46px;
+	font-weight: 700;
+	color: #ccc;
+	margin-bottom: 30px;
+
+}
+
+.footer__text {
+	margin-bottom: 30px;
+	font-size: 15px;
+	color: #999;
+}
+
+.footer__social {
+	margin-bottom: 25px;
+}
+
+.footer__social-header {
+	padding-bottom: 15px;
+
+	font-size: 14px;
+	color: #333;
+
+	border-bottom: 1px solid #e5e5e5;
+
+	span {
+		font-size: 18px;
+		font-weight: 700;
+	}
+}
+
+.footer__social-content {
+	padding-top: 15px;
+	font-size: 15px;
+	color: #999;
+	font-style: italic;
+	font-weight: 300;
+
+	a {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 10px;
+
+		font-size: 18px;
+		color: #95e1d3;
+	}
+}
+
+.footer__title {
+	text-transform: uppercase;
+	color: #333;
+	font-size: 14px;
+
+	margin: 30px 0;
+}
+
+.subscribe {
+	display: flex;
+	width: 100%;
+	max-width: 380px;
+}
+
+.subscribe__input {
+	// 230/380 = 60%
+	width: 60%;
+	height: 40px;
+	padding: 12px;
+	background: #fff;
+	border: 1px solid #e7e7e7;
+	border-right: 0;
+	// у кнопок и форм лушче всего прописывать font-family так как будет по умолчинаю браузера 
+	font-family: "Montserrat", sans-serif;
+	line-height: 1.1;
+
+	font-size: 15px;
+	font-style: italic;
+	font-weight: 300;
+	color: #333;
+	
+	&::placeholder {
+		color: #f38181;
+	}
+
+	&:focus {
+		border-color: #95e1d3;
+	}
+}
+
+.subscribe__btn {
+	width: 40%;
+	height: 40px;
+	padding: 12px 30px;
+
+	background-color: #95e1d3;
+	line-height: 1.1;
+	border: 0;
+
+	cursor: pointer;
+	font-family: "Montserrat", sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	color: #fff;
+	text-transform: uppercase;
+
+	transition: background .2s linear;
+
+	&:hover {
+		background-color: #74c7b8;
+	}
+}
+
+ 
+
+.blogs__item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.blogs__image {
+	width: 120px;
+	height: 80px;
+}
+
+.blogs__content {
+	padding-left: 20px;
+}
+
+.blogs__title {
+	display: block;
+	color: #333;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-decoration: none;
+	line-height: 1.5;
+	margin-bottom: 5px;
+	
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+.blogs__date {
+	font-style: 13px;
+	color: #999;
+	font-style: italic;
+	font-weight: 300;
+}
+
+.instagram {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+}
+
+.instagram__item {
+	width: 32.33333%;
+	border-bottom: 1px solid #fff;
+// пока отключаем
+	// flex: 1 1 0;
+
+	img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.copyright {
+	padding: 20px 0;
+	border-top: 1px solid #e5e5e5;
+	text-align: center;
+
+	font-size: 14px;
+	color: #333;
+
+	span {
+		color: #f38181;
+	}
+}

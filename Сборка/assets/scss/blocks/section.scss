@@ -1,0 +1,91 @@
+.services {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+} 
+
+.services__item {
+	// посмотри как это работает
+	width: 23.33333%;
+	padding: 0 35px 40px 85px;
+
+	position: relative;
+	margin-bottom: 40px;
+}
+
+.services__item--border {
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.serviced__icon {
+	// чтобы иконка была слева
+	position: absolute;
+	top: 0;
+	left: 28px;
+// зачем?
+	z-index: 1;
+}
+
+.services__title {
+	margin-bottom: 10px;
+
+	font-size: 14px;
+	color: #333;
+	text-transform: uppercase;
+}
+
+.services__text {
+	font-size: 15px;
+	color: #999;
+}
+
+
+
+.section--devices {
+	// прижимаем картинку айпад книзу
+	padding-bottom: 0;
+	margin-bottom: 40px;
+
+	background: url("../images/devices-bg.jpg") center no-repeat;
+}
+
+.section--gray {
+	background-color: #f8f8f8;	
+} 
+
+.section--clients {
+	background: #f5f5f5 url("../images/whtpeoplesay/bg.jpg") center no-repeat;
+	background-size: cover;
+}
+
+.section--map {
+	padding: 40px 0;
+	background: url("../images/map.jpg") center no-repeat;
+	background-size: cover;
+}
+
+.devices {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.devices__item {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.devices__item--iphone {
+	position: absolute;
+	bottom: -80px;
+	right: 0;
+	// зачем?
+	z-index: 1;;
+}
+
+
+
+
+
